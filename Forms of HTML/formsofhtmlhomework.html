@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Form Practice</title></head>
+        <body>
+            <h1> Personal Detail Form</h1>
+            <label> Enter your sport</label> <br>
+            <input type="text" id="sport"> <br><br>
+            <label>Enter your club</label> <br>
+            <input type="text" id="club"> <br><br>
+            <label> Enter your class</label> <br>
+            <input type="text" id="class"> <br><br>
+            <label> Gender: </label> <br>
+            <input type="radio" id="Female" name="gender" value="female"> Female<br>
+            <input type="radio" id="Male" name="gender" value="male"> Male<br> <br>
+            <label> Favorite City</label> <br>
+                <input type="checkbox" id="city" value="Mumbai"> Mumbai <br>
+                <input type="checkbox" id="city" value="Agra"> Agra <br>
+                <input type="checkbox" id="city" value="Ahmedabad"> Ahmedabad <br> <br>
+                <input type="submit">
+        </body>
+    <title> Dropdown Field</title>
+    <body>
+        <fieldset>
+            <legend> <b>Your Marks</b></legend>
+            <form action="/action_page.php" oninput="x.value=(parseInt(m1.value)+parseInt(m2.value)+parseInt(m3.value))/3">
+                <label> Name</label> <br>
+                <input type="text" id="name"> <br> <br>
+                <label> Your Marks</label> <br>
+                <select name="subject1" id="subject1">
+                    <option value="Maths">Maths</option>
+                    <option value="Science">Science</option>
+                    <option value="English">English</option>
+                </select>
+                <input type="number" id="m1" name="m1"> <br> <br>
+                <select name="subject2" id="subject2">
+                    <option value="Maths">Maths</option>
+                    <option value="Science">Science</option>
+                    <option value="English">English</option>
+                </select>
+                <input type="number" id="m2" name="m2"> <br> <br>
+                <select name="subject3" id="subject3">
+                    <option value="Maths">Maths</option>
+                    <option value="Science">Science</option>
+                    <option value="English">English</option>
+                </select>
+                <input type="number" id="m3" name="m3"> <br> <br>
+                Average Marks: <output name="x" for="m1 m2 m3">
+                </output>
+        </fieldset>
+        </form>
+    </body>
+    <title> Form Field</title>
+    <body>
+        <form>
+            <fieldset>
+                <legend> Personal Details</legend>
+                <label> Your Full Name</label> <br>
+                <input type="text" id="fullname"> <br> <br>
+                <label> Your E-mail</label> <br>
+                <input type="text" id="email"> <br> <br>
+                <label> Gender: </label> <br>
+                <input type="radio" id="Female" name="gender" value="female"> Female<br>
+                <input type="radio" id="Male" name="gender" value="male"> Male<br> <br>
+                <label> Your Date of Birth</label> <br>
+                <input type="date" id="birthday"> <br> <br>
+            </fieldset>
+        </form>
+    </body>
+</html>
