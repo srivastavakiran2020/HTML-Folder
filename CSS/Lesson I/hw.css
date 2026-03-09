@@ -1,0 +1,27 @@
+/* global css */
+* {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+/* External CSS */
+#test {
+    color: blue
+}
+
+h4 {
+    color: hotpink
+}
+
+.myclass {
+    color: goldenrod
+}
+
+#myid {
+    color: rgb(100, 145, 17)
+}
+
+H5,
+P {
+    color: aquamarine
+}
