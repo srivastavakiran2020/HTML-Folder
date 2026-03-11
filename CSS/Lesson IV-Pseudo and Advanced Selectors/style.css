@@ -1,0 +1,39 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:black;
+color:blue}
+H1{
+    color:blueviolet
+}
+a{
+    color:aquamarine;
+
+}
+a:hover{
+    color:purple;
+    
+}
+/* Child Selector*/
+
+ul>li{
+    font-weight:bold;
+}
+/* Sibling Selector */
+H1+P{
+    background-color:rgb(19, 155, 179);
+    padding: 10px;
+    border-radius:5px;
+} 
+/* hover: Pseudo-class*/
+ul li:hover{
+    color:violet
+}
+/* ::first-letter Pseudo-element*/
+p::first-letter {
+    font-size:200%;
+    color: green
+}
+/* ::after Pseudo-element */
+a::after {
+    content: "🌌"
+}
