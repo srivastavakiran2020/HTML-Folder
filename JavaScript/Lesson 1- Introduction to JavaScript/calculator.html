@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Calculator</title>
+    </head>
+    <body> 
+            <h1>JS Calculator</h1>
+            <p>Perform all Operations using JavaScript</p>
+            <p id="add"></p>
+            <p id="sub"></p>
+            <p id="mul"></p>
+            <p id="div"></p>
+    </body>
+    <script>
+        var num1 = 100000000000000000000;
+        var num2 = 500000000;
+        var add = num1 + num2;
+        var sub = num1 - num2;
+        var mul = num1 * num2;
+        var div = num1 / num2;
+        document.getElementById("add").innerHTML =
+                "The added value is: " + add;
+            document.getElementById("sub").innerHTML =
+                "The subtracted value is: " + sub;
+            document.getElementById("mul").innerHTML =
+                "The multiplied value is: " + mul;
+            document.getElementById("div").innerHTML =
+                "The divided value is: " + div;
+    </script>
+
+</html>
