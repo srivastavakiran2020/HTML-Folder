@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays' Methods</title>
+    </head>
+    <body>
+        <H1><i><code>Methods of Array</code></i></H1>
+        <H2>join() and pop()</H2>
+        <P>The <code>join()</code> method joins two array elements into a string and the <code>pop()</code> method removes the last element from one array.</P>
+        <p id="myjoin"></p>
+        <p id="myfirstpop"></p>
+        <p id="mysecondpop"></p>
+        <script>
+            var fruits = ["La Bananeria", "Tangerine", "Ice Apple", "Alfonso Mango"];
+            document.getElementById("myjoin").innerHTML = fruits.join (" * ");
+            document.getElementById("myfirstpop").innerHTML = fruits;
+            fruits.pop();
+            document.getElementById("mysecondpop").innerHTML = fruits;
+        </script>
+    </body>
+</html>
