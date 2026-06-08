@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My Planets Cards</title>
+    </head>
+    <style>
+        body {
+            font-family:Arial;
+            background:rgb(205, 255, 213);
+            padding:30px;
+            text-align:center;
+
+        }
+        H1 {color:blue;}
+        P {color:red;}
+
+        .cards {
+            display: flex;
+            justify-content:center;
+            gap: 20px;
+            margin-top:25px;
+        }
+        .card {
+            background: rgb(140, 133, 241);
+            border: 3px solid blueviolet;
+            border-radius: 25px;
+            padding: 20px;
+            width: 200px;
+        }
+        .planet-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: black;
+        }
+        .planet-fact {
+            color: #000000;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        button{
+            background:purple;
+            color:azure;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 8PX;
+            cursor: pointer;
+            font-size:16px;
+            margin-top: 10px;
+        }
+    </style>
+    <body>
+        <H1>My Planets Cards</H1>
+        <p>Use a JavaScript class to display your cards.</p>
+        <button onclick="showPlanets()">Display Cards!</button>
+        <div class="cards">
+            <div id="card1"></div>
+            <div id="card2"></div>
+            <div id="card3"></div>
+            <div id="card4"></div>
+            <div id="card5"></div>
+            <div id="card6"></div>
+            <div id="card7"></div>
+            <div id="card8"></div>
+            <div id="card9"></div>
+            <div id="card10"></div>
+        </div>
+        <script>
+            class Planet {
+                constructor(name, fact) {
+                    this.name = name;
+                    this.fact = fact;
+                }
+                describe() {
+                    return this.name + ": " + this.fact
+                }
+            }
+            function showPlanets() {
+                let p1 = new Planet("Mercury", "The smallest and closest planet.");
+                let p2 = new Planet("Venus", "The hottest planet and the 2nd.");
+                let p3 = new Planet("Earth", "The only planet with water and life.");
+                let p4 = new Planet("Mars", "The planet known as Red Planet.");
+                let p5 = new Planet("Jupiter", "The largest and the first of Jovian planets.");
+                let p6 = new Planet("Saturn", "The 2nd gas giant with rocky, icy rings.");
+                let p7 = new Planet("Uranus", "The ice giant spinning 98 degrees.");
+                let p8 = new Planet("Neptune", "The coldest and farthest planet.");
+
+                document.getElementById("card1").innerHTML =
+                    "<div class='card''><div class='planet-name'>" + p1.name + "</div>" +
+                    "<div class='planet-fact'>" + p1.describe() + "</div></div>";
+
+                document.getElementById("card2").innerHTML =
+                    "<div class='card''><div class='planet-name'>" + p2.name + "</div>" +
+                    "<div class='planet-fact'>" + p2.describe() + "</div></div>";
+
+                document.getElementById("card3").innerHTML =
+                    "<div class='card''><div class='planet-name'>" + p3.name + "</div>" +
+                    "<div class='planet-fact'>" + p3.describe() + "</div></div>";
+
+                document.getElementById("card4").innerHTML =
+                    "<div class='card''><div class='planet-name'>" + p4.name + "</div>" +
+                    "<div class='planet-fact'>" + p4.describe() + "</div></div>";
+
+                document.getElementById("card5").innerHTML =
+                    "<div class='card''><div class='planet-name'>" + p5.name + "</div>" +
+                    "<div class='planet-fact'>" + p5.describe() + "</div></div>";
+
+                document.getElementById("card6").innerHTML =
+                    "<div class='card''><div class='planet-name'>" + p6.name + "</div>" +
+                    "<div class='planet-fact'>" + p6.describe() + "</div></div>";
+
+                document.getElementById("card7").innerHTML =
+                    "<div class='card''><div class='planet-name'>" + p7.name + "</div>" +
+                    "<div class='planet-fact'>" + p7.describe() + "</div></div>";
+
+                document.getElementById("card8").innerHTML =
+                    "<div class='card''><div class='planet-name'>" + p8.name + "</div>" +
+                    "<div class='planet-fact'>" + p8.describe() + "</div></div>";
+            }
+        </script>
+    </body>
+</html>
