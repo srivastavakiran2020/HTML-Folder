@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Zoo</title>
+        <style>
+            body  {
+                font-family: Helvetica, monospace;
+                background:lightcyan;
+                text-align: center;
+                padding: 30px;
+            }
+
+            H1 {
+                    color: blue;
+            }
+
+            #zoo {
+                border: 2px solid green;
+                width: 300px;
+                margin: 16px auto;
+                border-radius: 10px;
+                background: aliceblue;
+            }
+
+            .zone {
+                border: 1px solid rgb(162, 0, 255);
+                margin: 6px 0;
+                padding: 8px 12px;
+                border-radius: 6px;
+                text-align: left;
+            }
+
+            button {
+                background:  mediumaquamarine;
+                color:black;
+                padding: 10px 24px;
+                border: none;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+
+        <H1>My Zoo land</H1>
+        <p>Use JS with DOM to add animals to each cage.</p>
+
+        <div id="zoo">
+            <div class="zone">Cage 1: <span id="zone1"></span></div>
+            <div class="zone">Cage 2: <span id="zone2"></span></div>
+            <div class="zone">Cage 3: <span id="zone3"></span></div>
+            <div class="zone">Total: <span id="total"></span></div>
+        </div>
+
+        <br>
+
+        <button onclick="openZoo()">See Animals!</button>
+
+        <p id="zoo-status"></p>
+
+        <script>
+
+            function openZoo() {
+                
+                document.getElementById("zone1").innerHTML = "Tiger";
+
+                document.getElementById("zone2").innerHTML = "Eagle";
+
+                document.getElementById("zone3").innerHTML = "Shark";
+
+                document.getElementById("total").innerHTML = "3";
+            }
+        </script>
+    </body>
+</html>
