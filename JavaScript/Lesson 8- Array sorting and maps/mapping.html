@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Mapping in JS </title>
+    </head>
+    <body>
+        <H3>Multiply every element in the array with 7 using Mapping:</H3>
+        <p id="product_value"></p>
+
+        <script>
+            var numbers = [8, 12, 9, 100, 7];
+
+            function myFunction(num) {
+                return num * 7;
+            }
+
+            var newArray = numbers.map(myFunction);
+
+            document.getElementById("product_value").innerHTML = newArray;
+        </script>
+    </body>
+</html>
