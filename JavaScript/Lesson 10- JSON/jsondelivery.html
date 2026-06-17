@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Delivery by JSON</title>
+        <style>
+            body {
+                font-family: 'Franklin Gothic Medium', monospace;
+                background: aquamarine;
+                text-align: center;
+                padding: 30px;
+            }
+            H1 {
+                color: darkolivegreen;
+            }
+            button{
+                background: blue;
+                color: aqua;
+                padding: 10px 25px;
+                border: none;
+                border-radius: 20px;
+                cursor: pointer;
+                margin: 5px;
+            }
+            div {
+                border: 1px solid salmon;
+                width: 280px;
+                margin: 6px auto;
+                padding: 8px 12px;
+                text-align: left;
+                border-radius: 6px;
+            }
+        </style>
+    </head>
+    <body>
+        <H1>My Delivery Tracker</H1>
+        <button onclick="saveOrder()">Save Order</button>
+        <button onclick="startDelivery()">Start Delivery</button>
+
+        <div>JSON Text:<span id="json-text"></span></div>
+        <div>Loaded Item:<span id="loaded-item"></span></div>
+        <div>Loaded Price:<span id="loaded-price"></span></div>
+        <div>Status:<span id="status"></span></div>
+        <div>Result:<span id="result"></span></div>
+
+        <script>
+
+            // JSON - order stored as a JS Object
+
+            let order = {
+                item: "Pasta and Pizza",
+                price: $490,
+                shop: Poptos
+            };
+
+            // JSON.stringify() and JSON.parse()
+            function saveOrder() {
+                let jsonText = JSON.stringify(order);
+                let loadedOrder = JSON.parse(jsonText);
+
+                document.getElementById("json-text").innerHTML = jsonText;
+                document.getElementById("loaded-item").innerHTML = loadedOrder.item;
+                document.getElementById("loaded-price").innerHTML = loadedOrder.price;}
+
+                //delay() - waits for few milliseconds - you shouldn't change this
+                function delay (ms) {
+                    return new Promise (function(resolve) {
+                setTimeout(resolve, ms)
+                });
+                }
+                // async and await - tracks step by step
+                async function startDelivery() {
+                    document.getElementById("result").innerHTML = "";
+
+                    //setTimeout with a callback second: it runs for 1 second
+                    document.getElementById("result").innerHTML = "Your order has been recieved!";
+
+                    setTimeout(function() {
+                        document.getElementById("status").innerHTML = "Preparing your order.....";
+                    }, 1000)
+                    //await - pause for 3sec
+                    await delay(3000);
+                    document.getElementById("status").innerHTML = "Order on the way.";
+
+                    //await for 2sec
+                    await delay(2000);
+                    document.getElementById("result").innerHTML = "Your order is at your doorstep!"
+                } 
+            
+        </script>
+    </body>
+</html>
