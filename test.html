@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Background Color Changer</title>
+    <style>
+        /* Center everything perfectly on the page */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            /* Smoothly animate the color transition */
+            transition: background-color 0.4s ease;
+        }
+
+        /* Style the interactive button */
+        .color-btn {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #333333;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.1s ease, background-color 0.2s;
+        }
+
+        /* Subtle button hover and click animations */
+        .color-btn:hover {
+            background-color: #000000;
+        }
+
+        .color-btn:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- The button that triggers the script -->
+    <button class="color-btn" id="changeColorBtn">Change Background</button>
+
+    <script>
+        // Select the button element using its ID
+        const button = document.getElementById('changeColorBtn');
+
+        // Function to generate a completely random RGB color string
+        function getRandomColor() {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        // Attach a click event listener to update the body background color
+        button.addEventListener('click', () => {
+            document.body.style.backgroundColor = getRandomColor();
+        });
+    </script>
+
+</body>
+
+</html>
