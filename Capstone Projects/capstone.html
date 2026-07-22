@@ -38,5 +38,28 @@
                 <a href="#">Contact Us</a>
                 
             </div>
+            <section>
+                <img class="mySlides" src="windows98.jpg" style="height:500px">
+                <img class="mySlides" src="windows7.jpg" style="height:500px">
+                <img class="mySlides" src="windows10.jpg" style="height:500px">
+                <img class="mySlides" src="windows11.jpg" style="height:500px">
+            </section>
+            <script>
+                //Automatic Slideshow - change image in every 3 seconds.
+                var myIndex =  0;
+                carousel();
+
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i= 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) {myIndex = 1}
+                    x[myIndex-1].style.display = "block";
+                    setTimeout(carousel, 100);
+                }
+            </script>
         </body>
 </html>
