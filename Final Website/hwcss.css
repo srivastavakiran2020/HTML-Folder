@@ -3,11 +3,28 @@ html {
     height: 100%;
     margin: 0;
     font-size: 16px;
-    font-family: "Arial", "monospace";
+    font-family: "Lato", sans-serif;
     font-weight: 400;
     line-height: 1.8em;
-    color: #267967;
-    background-color: aqua;
+    color: #666;
+    background-color: #b6f8ef;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    display: inline;
+    color: #1affa3;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: #111;
 }
 
 .pimg1,
@@ -22,17 +39,17 @@ html {
 }
 
 .pimg1 {
-    background-image: url('Progresser.jpg');
+    background-image: url('image1.jpg');
     min-height: 100%;
 }
 
 .pimg2 {
-    background-image: url('Harmony.jpg');
+    background-image: url('image2.jpg');
     min-height: 400px;
 }
 
 .pimg3 {
-    background-image: url('PMacInFlow.jpg');
+    background-image: url('image3.jpg');
     min-height: 400px;
 }
 
@@ -42,12 +59,12 @@ html {
 }
 
 .section-light {
-    background-color: lightgray;
+    background-color: #f4f4f4;
     color: #666;
 }
 
 .section-dark {
-    background-color: darkgray;
+    background-color: #282e34;
     color: #ddd;
 }
 
@@ -57,14 +74,14 @@ html {
     width: 100%;
     text-align: center;
     color: #000;
-    font-size: 37px;
+    font-size: 27px;
     letter-spacing: 8px;
     text-transform: uppercase;
 }
 
 .ptext .border {
-    background-color: #1b1a1a;
-    color: aliceblue;
+    background-color: #111;
+    color: #fff;
     padding: 20px;
 }
 
